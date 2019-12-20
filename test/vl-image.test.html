@@ -12,7 +12,11 @@
 <body>
   <test-fixture id="vl-image-fixture">
     <template>
-      
+      	<img is="vl-image"
+			sizes="100vw"
+			src="../demo/default.jpg"
+			srcset="../demo/mobile.jpg 320w, ../demo/default.jpg 1024w, ../demo/wide.jpg 1600w"
+			alt="Content Header">
     </template>
   </test-fixture>
 
@@ -20,9 +24,9 @@
     suite('vl-image', () => {
       const should = chai.should();
 
-      test('vl-image test', () => {
-        const fixture = fixture('vl-image-fixture');
-        assert.isTrue(true);
+      test('voegt een vl-image class toe op de image', () => {
+        const image = fixture('vl-image-fixture');
+        assert.isTrue(image.classList.contains('vl-image'));
       });
     });
   </script>

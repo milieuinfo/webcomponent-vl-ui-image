@@ -1,11 +1,11 @@
-import { VlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
+import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
 
 /**
  * VlImage
  * @class
  * @classdesc 
  * 
- * @extends VlElement
+ * @extends NativeVlElement
  * 
  * @property 
  * 
@@ -14,6 +14,27 @@ import { VlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
  * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-image.html|Demo}
  * 
  */
-export class VlImage extends VlElement(HTMLElement) {}
+export class VlImage extends NativeVlElement(HTMLImageElement) {
 
-define('vl-image', VlImage);
+   static get _observedAttributes() {
+        return [];
+    }
+
+    static get _observedClassAttributes() {
+        return [];
+    }
+
+    connectedCallback() {
+        this.classList.add('vl-image');
+    }
+
+    get _classPrefix() {
+        return 'vl-image--';
+    }
+
+    get _stylePath() {
+        return '../style.css';
+    }
+}
+
+define('vl-image', VlImage, {extends: 'img'});
