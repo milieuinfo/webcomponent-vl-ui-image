@@ -12,6 +12,12 @@
 <body>
   <test-fixture id="vl-image-fixture">
     <template>
+      	<img is="vl-image" alt="Alternatieve tekst">
+    </template>
+  </test-fixture>
+
+  <test-fixture id="vl-image-fixture-no-alt">
+    <template>
       	<img is="vl-image">
     </template>
   </test-fixture>
@@ -23,6 +29,11 @@
       test('voegt een vl-image class toe op de image', () => {
         const image = fixture('vl-image-fixture');
         assert.isTrue(image.classList.contains('vl-image'));
+      });
+
+      test('voegt een leeg alt attribuut toe op de image als er geen alt is', () => {
+        const image = fixture('vl-image-fixture-no-alt');
+        expect(image.getAttribute('alt')).to.equal("");
       });
     });
   </script>
