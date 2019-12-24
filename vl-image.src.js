@@ -13,13 +13,15 @@ import { NativeVlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
  * 
  */
 export class VlImage extends NativeVlElement(HTMLImageElement) {
-    connectedCallback() {
-        this.classList.add('vl-image');
-        if (!this.alt) {
-        	this.alt = "";
-        }
-    }
-
+	
+	constructor() {
+		super();
+		this.classList.add('vl-image');
+		if (!this.alt) {
+			this.alt = "";
+		}
+	}	
+	
     get _stylePath() {
         return '../style.css';
     }

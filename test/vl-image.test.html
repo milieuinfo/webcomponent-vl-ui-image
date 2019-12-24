@@ -32,8 +32,10 @@
       });
 
       test('voegt een leeg alt attribuut toe op de image als er geen alt is', () => {
-        const image = fixture('vl-image-fixture-no-alt');
-        expect(image.getAttribute('alt')).to.equal("");
+        const imageNoAlt = fixture('vl-image-fixture-no-alt');
+        expect(imageNoAlt.getAttribute('alt')).to.equal("");
+        const imageWithAlt = fixture('vl-image-fixture');
+        expect(imageWithAlt.getAttribute('alt')).to.equal("Alternatieve tekst");
       });
     });
   </script>
