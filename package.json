@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-image",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Gebruik de image component voor illustraties, graphics, tekeningen, foto's etc op je site.",
   "scripts": {
     "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
