@@ -8,4 +8,9 @@ describe('vl-image', async () => {
     before(() => {
         return vlImagePage.load();
     });
+
+    it('image word geladen', async () => {
+        const image = await vlImagePage.getImage();
+        await assert.eventually.isTrue(image.isDisplayed());
+    });
 });

@@ -3,8 +3,8 @@ const { Page } = require('vl-ui-core');
 const { Config } = require('vl-ui-core');
 
 class VlImagePage extends Page {
-    async _getImage(selector) {
-        return new VlImage(this.driver, selector);
+    async getImage() {
+        return new VlImage(this.driver, '#image');
     }
 
     async load() {
