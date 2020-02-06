@@ -13,4 +13,8 @@ describe('vl-image', async () => {
         const image = await vlImagePage.getImage();
         await assert.eventually.isTrue(image.isDisplayed());
     });
+
+    after(async () => {
+        return driver.quit();
+    })
 });
