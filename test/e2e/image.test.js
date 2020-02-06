@@ -1,5 +1,5 @@
 
-const { assert, driver } = require('vl-ui-core').Test;
+const { assert, driver } = require('vl-ui-core').Test.Setup;
 const VlImagePage = require('./pages/vl-image.page');
 
 describe('vl-image', async () => {
