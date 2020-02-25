@@ -14,7 +14,4 @@ describe('vl-image', async () => {
         await assert.eventually.isTrue(image.isDisplayed());
     });
 
-    after(async () => {
-        return driver.quit();
-    })
 });
