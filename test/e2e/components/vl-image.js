@@ -1,10 +1,5 @@
 const { VlElement } = require('vl-ui-core').Test;
 
-class VlImage extends VlElement {  
-    constructor(driver, selector) {
-        super(driver, selector);
-    }
-
-}
+class VlImage extends VlElement {}
 
 module.exports = VlImage;
