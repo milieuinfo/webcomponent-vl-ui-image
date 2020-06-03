@@ -24,8 +24,6 @@
 
   <script>
     suite('vl-image', () => {
-      const should = chai.should();
-
       test('voegt een vl-image class toe op de image', () => {
         const image = fixture('vl-image-fixture');
         assert.isTrue(image.classList.contains('vl-image'));
@@ -33,9 +31,9 @@
 
       test('voegt een leeg alt attribuut toe op de image als er geen alt is', () => {
         const imageNoAlt = fixture('vl-image-fixture-no-alt');
-        expect(imageNoAlt.getAttribute('alt')).to.equal("");
+        expect(imageNoAlt.getAttribute('alt')).to.equal('');
         const imageWithAlt = fixture('vl-image-fixture');
-        expect(imageWithAlt.getAttribute('alt')).to.equal("Alternatieve tekst");
+        expect(imageWithAlt.getAttribute('alt')).to.equal('Alternatieve tekst');
       });
     });
   </script>
