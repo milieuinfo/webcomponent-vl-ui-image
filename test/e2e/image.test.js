@@ -1,11 +1,12 @@
 
-const {assert, driver} = require('vl-ui-core').Test.Setup;
+const {assert, getDriver} = require('vl-ui-core').Test.Setup;
 const VlImagePage = require('./pages/vl-image.page');
 
 describe('vl-image', async () => {
-  const vlImagePage = new VlImagePage(driver);
+  let vlImagePage;
 
   before(() => {
+    vlImagePage = new VlImagePage(getDriver());
     return vlImagePage.load();
   });
 
