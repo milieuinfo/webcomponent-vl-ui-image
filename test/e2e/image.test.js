@@ -10,6 +10,10 @@ describe('vl-image', async () => {
     return vlImagePage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlImagePage.hasWcagIssues());
+  });
+
   it('image word geladen', async () => {
     const image = await vlImagePage.getImage();
     await assert.eventually.isTrue(image.isDisplayed());
